@@ -1,0 +1,45 @@
+{
+  "name": "dsh-workspace-subfolder",
+  "version": "0.3.3",
+  "private": true,
+  "type": "module",
+  "description": "Sidebar action that creates a real child folder inside a Workspace and registers it as its own Workspace, renames a Workspace's real directory (taking its Sessions along), and moves an existing conversation into any Workspace folder.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workspace",
+    "sidebar",
+    "sessions"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "selftest.mjs",
+    "smoketest.mjs"
+  ],
+  "scripts": {
+    "test": "node selftest.mjs && node smoketest.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

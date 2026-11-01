@@ -1,0 +1,7 @@
+# dsh-workspace-subfolder: one sidebar footer action that creates a child
+# directory inside a registered Workspace and registers it as its own Workspace,
+# plus a session-menu entry that moves a conversation into another Workspace and
+# a rename mode that renames a Workspace's real directory.
+- insert:
+    - id: workspace-subfolder
+      name: dsh-workspace-subfolder
